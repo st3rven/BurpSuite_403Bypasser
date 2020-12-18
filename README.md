@@ -39,6 +39,7 @@ $1/$2..%0d/
 $1/$2..%5c
 $1/$2..%ff/
 $1/$2.%2e/
+$1/$2?radomstring
 ```
 
 ## Installation
