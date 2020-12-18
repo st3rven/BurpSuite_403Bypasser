@@ -28,9 +28,18 @@ $1/$2//
 $1/$2/
 $1/$2/.randomstring
 $1/$2..;/
-```
 
-__Thanks [@lohubi](https://github.com/lobuhi) for contributing many payloads.__
+### New Payloads
+$1/$2%
+$1/$2%09/
+$1/$2../
+$1/$2..%2f
+$1/$2..%00/
+$1/$2..%0d/
+$1/$2..%5c
+$1/$2..%ff/
+$1/$2.%2e/
+```
 
 ## Installation
 
